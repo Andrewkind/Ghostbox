@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MyScene\Plane_Script.js">
+    <Files>
+      <File FileName="Assets\Scripts\Populator.cs" Line="19" Column="21" />
+      <File FileName="Assets\Scripts\InterfaceScript.cs" Line="41" Column="24" />
+      <File FileName="Assets\MyScene\Plane_Script.js" Line="15" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

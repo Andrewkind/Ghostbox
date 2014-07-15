@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{E964486B-D648-83E0-C945-1AC121CCB581}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\InterfaceScript.cs" />
+     <Compile Include="Assets\Scripts\LineScript.cs" />
+     <Compile Include="Assets\Scripts\PlanetScript.cs" />
+     <Compile Include="Assets\Scripts\Populator.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\Affector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\AirFieldAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\BombAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\ColorAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\DragAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\GravityAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\SineAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\TurbulenceFieldAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Affectors\VortexAffector.cs" />
+     <Compile Include="Assets\Xffect\Script\Component\CompositeXffect.cs" />
+     <Compile Include="Assets\Xffect\Script\Component\EffectLayer.cs" />
+     <Compile Include="Assets\Xffect\Script\Component\SimpleRotate.cs" />
+     <Compile Include="Assets\Xffect\Script\Component\XffectCache.cs" />
+     <Compile Include="Assets\Xffect\Script\Component\XffectComponent.cs" />
+     <Compile Include="Assets\Xffect\Script\Cone.cs" />
+     <Compile Include="Assets\Xffect\Script\CustomMesh.cs" />
+     <Compile Include="Assets\Xffect\Script\EffectNode.cs" />
+     <Compile Include="Assets\Xffect\Script\Emitter.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraComponent\XftCameraEffectComp.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraComponent\XftCameraShakeComp.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\CameraEffectEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\ColorInverseEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\GlitchEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\GlowEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\GlowPerObjEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\RadialBlurEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraEffects\RadialBlurTexAddEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\CameraShakeEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\LightEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\SoundEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\TimeScaleEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\XftEvent.cs" />
+     <Compile Include="Assets\Xffect\Script\Events\XftEventComponent.cs" />
+     <Compile Include="Assets\Xffect\Script\RenderObject.cs" />
+     <Compile Include="Assets\Xffect\Script\RibbonTrail.cs" />
+     <Compile Include="Assets\Xffect\Script\Rope.cs" />
+     <Compile Include="Assets\Xffect\Script\RopeData.cs" />
+     <Compile Include="Assets\Xffect\Script\UVAnimation.cs" />
+     <Compile Include="Assets\Xffect\Script\VertexPool.cs" />
+     <Compile Include="Assets\Xffect\Script\XftSprite.cs" />
+     <Compile Include="Assets\Xffect\Script\XftTools.cs" />
+     <Compile Include="Assets\Xffect\SpriteMaker\CameraController.cs" />
+     <Compile Include="Assets\Xffect\SpriteMaker\SpriteMaker.cs" />
+     <Compile Include="Assets\Xffect\Tutorial\API Usage\GravityDemo\GravityDemo.cs" />
+     <Compile Include="Assets\Xffect\Tutorial\API Usage\MagicChain\XftMagicChainDemo.cs" />
+     <Compile Include="Assets\Xffect\Tutorial\GettingStart\ReleaseYourEffect.cs" />
+     <Compile Include="Assets\Xffect\Tutorial\GettingStart\StopYourEffect.cs" />
+     <Compile Include="Assets\Xffect\Tutorial\RopeRenderer\XftRopeDemo.cs" />
+     <Compile Include="Assets\Xffect\demo.cs" />
+     <None Include="Assets\Xffect\Tutorial\Events\CameraShake\readme.txt" />
+     <None Include="Assets\Xffect\EffectLibrary\readme.txt" />
+     <None Include="Assets\Xffect\Resources\Shaders\AdvanceShader\xft_displacement-dissolve_additive.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_color_inverse.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_glitch.shader" />
+     <None Include="Assets\Xffect\Tutorial\GettingStart\readme.txt" />
+     <None Include="Assets\Xffect\Tutorial\AdvanceShader\Dissolve\readme.txt" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_glow_downsample.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\AdvanceShader\xft_displacement_additive.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\GlowPerObj\xft_glow_replacement.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\AdvanceShader\xft_mask_additive.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_radial_blur.shader" />
+     <None Include="Assets\Xffect\Tutorial\API Usage\GravityDemo\readme.txt" />
+     <None Include="Assets\Xffect\readme.txt" />
+     <None Include="Assets\Xffect\SpriteMaker\tutorial.txt" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_glow_conetap.shader" />
+     <None Include="Assets\Xffect\Tutorial\AdvanceShader\ScreenDistort\readme.txt" />
+     <None Include="Assets\Xffect\Resources\Shaders\Object\xft_volume_fog.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\GlowPerObj\xft_glow_perobj_additive.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\GlowPerObj\xft_glow_blend.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_glow_compose.shader" />
+     <None Include="Assets\Xffect\Resources\Shaders\AdvanceShader\xft_displacement_screen.shader" />
+     <None Include="Assets\Xffect\UPGRADE NOTES_From3.xTo4.x.txt" />
+     <None Include="Assets\Xffect\Tutorial\SubEmitter\readme.txt" />
+     <None Include="Assets\Xffect\Resources\Shaders\ImageEffect\xft_radial_blur_mask.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

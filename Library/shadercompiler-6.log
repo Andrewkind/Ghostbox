@@ -1,0 +1,39 @@
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-6-6232
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=8 type=1 insize=805 outsize=1382 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2292 outsize=407 kw=SOFTPARTICLES_ON ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1580 outsize=360 kw=SOFTPARTICLES_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=1580 outsize=1828 kw=SOFTPARTICLES_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=1346 outsize=2438 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1887 outsize=347 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1435 outsize=397 kw=SOFTPARTICLES_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1435 outsize=420 kw=SOFTPARTICLES_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1049 outsize=132 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1266 outsize=2022 kw=SOFTPARTICLES_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1266 outsize=143 kw=SOFTPARTICLES_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1370 outsize=156 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=1027 outsize=365 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1310 outsize=518 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=0 insize=2004 outsize=407 kw=SOFTPARTICLES_ON ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=2004 outsize=672 kw=SOFTPARTICLES_ON ok=1
+Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
+
+
+Quitting shader compiler process
