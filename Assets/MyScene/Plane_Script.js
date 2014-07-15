@@ -116,13 +116,13 @@ function Update () {
 	if (Input.GetKeyDown ("1"))
 				speed = 10;
 	if (Input.GetKeyDown ("2"))
-				speed = 20;
-	if (Input.GetKeyDown ("3"))
-				speed = 30;
-	if (Input.GetKeyDown ("4"))
-				speed = 40;
-	if (Input.GetKeyDown ("5"))
 				speed = 50;
+	if (Input.GetKeyDown ("3"))
+				speed = 150;
+	if (Input.GetKeyDown ("4"))
+				speed = 500;
+	if (Input.GetKeyDown ("5"))
+				speed = 1250;
 	if (Input.GetKey ("q"))
 				speed--;
 	if (Input.GetKey ("e"))
@@ -130,7 +130,11 @@ function Update () {
 	if (Input.GetKeyDown ("6")) {
 				speed = lightSpeed;
 				Shake();
-	}			
+	}
+	
+	if(Input.GetKeyDown(KeyCode.F2)) {
+		Application.CaptureScreenshot("Screenshot.png");	
+	}
 
 	//Engine sound
 	/*
