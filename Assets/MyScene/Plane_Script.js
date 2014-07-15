@@ -30,6 +30,8 @@ RenderSettings.fog = true;
 var  myPitch : float;
 
 
+	var pingPrefab : Transform;
+
 ///////////////////////
 
 var lightSpeed : float = 500;
@@ -65,8 +67,8 @@ public var ribbon :GameObject;
 
 function Start(){
 	// Set up speed bar
-	pos = Vector2(700,30);
-	size = Vector2(700, 50);
+	pos = Vector2(700,850);
+	size = Vector2(600, 30);
 
 	// Disable ribbon at start
 	ribbon = GameObject.Find("EngineRibbon");
@@ -130,6 +132,10 @@ function Update () {
 	if (Input.GetKeyDown ("6")) {
 				speed = lightSpeed;
 				Shake();
+	}
+	if (Input.GetKeyDown ("c")) {
+				
+				DoPing();
 	}
 	
 	if(Input.GetKeyDown(KeyCode.F2)) {
@@ -249,4 +255,8 @@ function Shake(){
 	originRotation = transform.rotation;
 	shake_intensity = .3;
 	shake_decay = 0.002;
+}
+
+function DoPing() {
+	Instantiate(pingPrefab, transform.position, Quaternion.identity);
 }

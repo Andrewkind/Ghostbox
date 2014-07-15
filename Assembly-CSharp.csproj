@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\InterfaceScript.cs" />
      <Compile Include="Assets\Scripts\LineScript.cs" />
+     <Compile Include="Assets\Scripts\PingScript.cs" />
      <Compile Include="Assets\Scripts\PlanetScript.cs" />
      <Compile Include="Assets\Scripts\Populator.cs" />
      <Compile Include="Assets\Xffect\Script\Affectors\Affector.cs" />

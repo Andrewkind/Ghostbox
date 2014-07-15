@@ -25,7 +25,7 @@ public class InterfaceScript : MonoBehaviour {
 	void OnGUI() {
 		
 		//Draw the interface
-		//GUI.DrawTexture(new Rect(0, 0, 1920, 1080), interfaceTexture, ScaleMode.StretchToFill, true, 10.0F);
+		GUI.DrawTexture(new Rect(0, 0, 1920, 1080), interfaceTexture, ScaleMode.StretchToFill, true, 10.0F);
 		
 		//Write the target information
 		//SecondCameraScript secCamScript;
