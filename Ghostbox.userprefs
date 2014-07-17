@@ -4,8 +4,8 @@
     <Files>
       <File FileName="Assets\Scripts\Populator.cs" Line="19" Column="21" />
       <File FileName="Assets\Scripts\InterfaceScript.cs" Line="14" Column="64" />
-      <File FileName="Assets\MyScene\Plane_Script.js" Line="69" Column="23" />
-      <File FileName="Assets\Scripts\PingScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\MyScene\Plane_Script.js" Line="33" Column="11" />
+      <File FileName="Assets\Scripts\PingScript.cs" Line="15" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
