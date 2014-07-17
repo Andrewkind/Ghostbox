@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PingScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InterfaceScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\Populator.cs" Line="19" Column="21" />
-      <File FileName="Assets\Scripts\InterfaceScript.cs" Line="14" Column="64" />
-      <File FileName="Assets\MyScene\Plane_Script.js" Line="33" Column="11" />
-      <File FileName="Assets\Scripts\PingScript.cs" Line="15" Column="3" />
+      <File FileName="Assets\MyScene\Plane_Script.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PingScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InterfaceScript.cs" Line="50" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

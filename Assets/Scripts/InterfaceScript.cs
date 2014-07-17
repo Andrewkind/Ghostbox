@@ -42,7 +42,14 @@ public class InterfaceScript : MonoBehaviour {
 		
 		// Speed (need a guage bar)
 		GUI.Box(new Rect(320, 30, 150, 50), "Current Speed:");
-		
+
+		//help box
+		GUI.Box(new Rect(20, 130, 200, 25), "Movement: AWSD");
+		GUI.Box(new Rect(20, 158, 200, 25), "Speed: 1-6 (6 is boost)");
+		GUI.Box(new Rect(20, 178, 200, 25), "Speed: Q and E");
+		GUI.Box(new Rect(20, 198, 200, 25), "Drop Charge: C");
+
+
 
 			
 		//GUI.Label (new Rect(90, 30, 150, 50), "Target: None"); 
