@@ -32,14 +32,14 @@ function Start(){
 function Update () {
 
 
-	Character1.animation.CrossFade(BaseAnimation, 0.1);
-	Character2.animation.CrossFade(BaseAnimation, 0.1);
-	Character3.animation.CrossFade(BaseAnimation, 0.1);
+	Character1.GetComponent.<Animation>().CrossFade(BaseAnimation, 0.1);
+	Character2.GetComponent.<Animation>().CrossFade(BaseAnimation, 0.1);
+	Character3.GetComponent.<Animation>().CrossFade(BaseAnimation, 0.1);
 
 	if (TopAnimation != "") {
-			Character1.animation.Blend(TopAnimation, 1.0, 0.0);
-			Character2.animation.Blend(TopAnimation, 1.0, 0.0);
-			Character3.animation.Blend(TopAnimation, 1.0, 0.0);
+			Character1.GetComponent.<Animation>().Blend(TopAnimation, 1.0, 0.0);
+			Character2.GetComponent.<Animation>().Blend(TopAnimation, 1.0, 0.0);
+			Character3.GetComponent.<Animation>().Blend(TopAnimation, 1.0, 0.0);
 	}
 }
 
@@ -58,32 +58,32 @@ function OnGUI () {
 		//Back to the Main Menu
 		if(GUI.Button ( Rect(Screen.width - 60,10,50,20), "Back"))  {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (0);
 		}
 		
 		//Cameras
 		if(GUI.Button ( Rect(10,10,100,20), "Camera1")) {
 				
-				audio.PlayOneShot(ButtonSound);
-				camera.transform.position = Cam1.transform.position;
-				camera.transform.rotation = Cam1.transform.rotation;
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
+				GetComponent.<Camera>().transform.position = Cam1.transform.position;
+				GetComponent.<Camera>().transform.rotation = Cam1.transform.rotation;
 		
 		}
 		
 		if(GUI.Button ( Rect(120,10,100,20), "Camera2")) {
 				
-				audio.PlayOneShot(ButtonSound);
-				camera.transform.position = Cam2.transform.position;
-				camera.transform.rotation = Cam2.transform.rotation;
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
+				GetComponent.<Camera>().transform.position = Cam2.transform.position;
+				GetComponent.<Camera>().transform.rotation = Cam2.transform.rotation;
 		
 		}
 		
 		if(GUI.Button ( Rect(230,10,100,20), "Camera3")) {
 				
-				audio.PlayOneShot(ButtonSound);
-				camera.transform.position = Cam3.transform.position;
-				camera.transform.rotation = Cam3.transform.rotation;
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
+				GetComponent.<Camera>().transform.position = Cam3.transform.position;
+				GetComponent.<Camera>().transform.rotation = Cam3.transform.rotation;
 		
 		}
 		
@@ -93,13 +93,13 @@ function OnGUI () {
 
 		if(GUI.Button ( Rect(140,Screen.height - 125,100,20), "Dance")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("dance", 1);
 		}
 		
 		if(GUI.Button ( Rect(250,Screen.height - 125,100,20), "Zombi Walk")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("ZombiWalk", 1);
 		}
 
@@ -109,32 +109,32 @@ function OnGUI () {
 
 		if(GUI.Button ( Rect(140,Screen.height - 100,100,20), "Back")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("back", 2);
 		}
 		if(GUI.Button ( Rect(250,Screen.height - 100,100,20), "Idle")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("idle", 2);
 		}
 		if(GUI.Button ( Rect(360,Screen.height - 100,100,20), "Jump")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("jump", 2);
 		}
 		if(GUI.Button ( Rect(470,Screen.height - 100,100,20), "Run")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("run", 2);
 		}
 		if(GUI.Button ( Rect(580,Screen.height - 100,100,20), "Turn")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("turn", 2);
 		}
 		if(GUI.Button ( Rect(690,Screen.height - 100,100,20), "Walk")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("walk", 2);
 		}
 		
@@ -143,34 +143,34 @@ function OnGUI () {
 		GUI.Label ( Rect(10,Screen.height - 50,120,20), "Top Animations"); 
 
 		if(GUI.Button ( Rect(140,Screen.height - 50,100,20), "1 gun")) {
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("up_1gun", 3);
 				ShowObject("gun1");
 		}
 		if(GUI.Button ( Rect(250,Screen.height - 50,100,20), "2 guns")) {
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("up_2guns", 3);
 				ShowObject("gun1");
 				ShowObject("gun2");
 		}
 		if(GUI.Button ( Rect(360,Screen.height - 50,100,20), "Rifle")) {
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("up_rifle", 3);
 				ShowObject("rifle");
 		}
 		if(GUI.Button ( Rect(470,Screen.height - 50,100,20), "Sword")) {
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("up_sword", 3);
 				ShowObject("sword");
 				ShowObject("shield");
 		}
 		if(GUI.Button ( Rect(580,Screen.height - 50,100,20), "Wand")) {
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("up_wand", 3);
 				ShowObject("wand");
 		}
 		if(GUI.Button ( Rect(690,Screen.height - 50,100,20), "Idle")) {
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				CharacterAnimation("up_idle", 3);
 		}			
 }
@@ -218,22 +218,22 @@ function HideObjects(CharacterObject : GameObject){
 
 
 	var MyGun1: GameObject = GameObject.Find("/" + CharacterObject.name + "/biped/Spine/Spine1/Spine2/R UpperArm/R Forearm/R Hand/gun1");
-	MyGun1.renderer.enabled = false;
+	MyGun1.GetComponent.<Renderer>().enabled = false;
 	
 	var MyGun2: GameObject = GameObject.Find("/" + CharacterObject.name + "/biped/Spine/Spine1/Spine2/L UpperArm/L Forearm/L Hand/gun2");
-	MyGun2.renderer.enabled = false;
+	MyGun2.GetComponent.<Renderer>().enabled = false;
 	
 	var MyRifle: GameObject = GameObject.Find("/" + CharacterObject.name + "/biped/Spine/Spine1/Spine2/R UpperArm/R Forearm/R Hand/rifle");
-	MyRifle.renderer.enabled = false;
+	MyRifle.GetComponent.<Renderer>().enabled = false;
 	
 	var MyWand: GameObject = GameObject.Find("/" + CharacterObject.name + "/biped/Spine/Spine1/Spine2/R UpperArm/R Forearm/R Hand/wand");
-	MyWand.renderer.enabled = false;
+	MyWand.GetComponent.<Renderer>().enabled = false;
 	
 	var MySword: GameObject = GameObject.Find("/" + CharacterObject.name + "/biped/Spine/Spine1/Spine2/R UpperArm/R Forearm/R Hand/sword");
-	MySword.renderer.enabled = false;
+	MySword.GetComponent.<Renderer>().enabled = false;
 	
 	var MyShield: GameObject = GameObject.Find("/" + CharacterObject.name + "/biped/Spine/Spine1/Spine2/L UpperArm/L Forearm/shield");
-	MyShield.renderer.enabled = false;
+	MyShield.GetComponent.<Renderer>().enabled = false;
 	
 	
 }
@@ -254,9 +254,9 @@ function ShowObject(MyObject : String){
 		var C1MyObject: GameObject = GameObject.Find("/Character1" + MyObjectPath);
 		var C2MyObject: GameObject = GameObject.Find("/Character2" + MyObjectPath);
 		var C3MyObject: GameObject = GameObject.Find("/Character3" + MyObjectPath);
-		C1MyObject.renderer.enabled = true;
-		C2MyObject.renderer.enabled = true;
-		C3MyObject.renderer.enabled = true;
+		C1MyObject.GetComponent.<Renderer>().enabled = true;
+		C2MyObject.GetComponent.<Renderer>().enabled = true;
+		C3MyObject.GetComponent.<Renderer>().enabled = true;
 
 }
 

@@ -16,14 +16,14 @@ function OnGUI () {
 		//Animations Button
 		if(GUI.Button ( Rect(100,220,200,20), "Animations Demo Scene")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (4);
 		}
 		
 		//Car Demo Button
 		if(GUI.Button ( Rect(100,250,200,20), "Car Demo Scene")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (1);
 		}
 		
@@ -31,21 +31,21 @@ function OnGUI () {
 		//Plane Demo Button
 		if(GUI.Button ( Rect(100,280,200,20), "Plane Demo Scene")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (2);
 		}
 		
 		//Survival Demo
 		if(GUI.Button ( Rect(100,310,200,20), "Character Demo Scene")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (3);
 		}
 		
 		//Ragdoll Demo
 		if(GUI.Button ( Rect(100,340,200,20), "Ragdoll Demo Scene")) {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (5);
 		}
 

@@ -155,9 +155,9 @@ function Update () {
 	
 	//Engine sound
 	if (speed > 150)
-		audio.pitch = 7.5;
+		GetComponent.<AudioSource>().pitch = 7.5;
 		else {
-			audio.pitch = speed / 20.0;
+			GetComponent.<AudioSource>().pitch = speed / 20.0;
 
 		}
 	
@@ -207,7 +207,7 @@ var bip : AudioClip;
 
 function OnTriggerEnter (other : Collider) {
    
-   audio.PlayOneShot(bip);
+   GetComponent.<AudioSource>().PlayOneShot(bip);
    
 }
 
@@ -221,14 +221,14 @@ function OnGUI () {
 		//Back to the Menu
 		if(GUI.Button ( Rect(Screen.width - 60,10,50,20), "Restart")){
 				
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (0);
 		}
 		
 		//Back to the Menu
 		if(GUI.Button ( Rect(Screen.width - 360,10,50,20), "Exit")){
 				
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.Quit();
 		}
 		

@@ -28,7 +28,7 @@ function Launch(){
 	
 	var Launch : Vector3 = Vector3(0,UpForce, -ForwardForce);
 	var ImpactPoint : GameObject = GameObject.Find("biped");
-	ImpactPoint.rigidbody.AddForce(Launch);
+	ImpactPoint.GetComponent.<Rigidbody>().AddForce(Launch);
 	
 	yield WaitForSeconds (3.0);
 	buzy = 2;
@@ -42,7 +42,7 @@ function OnGUI () {
 		//Back to the Menu
 		if(GUI.Button ( Rect(Screen.width - 60,10,50,20), "Back")){
 				
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (0);
 		}
 		
@@ -54,7 +54,7 @@ function OnGUI () {
 		
 				if(GUI.Button ( Rect(Screen.width/2.0 - 50,400,100,40), "LAUNCH")){
 						
-						audio.PlayOneShot(LaunchSound);
+						GetComponent.<AudioSource>().PlayOneShot(LaunchSound);
 						buzy = 1;
 						Launch();
 				}
@@ -62,7 +62,7 @@ function OnGUI () {
 		
 				if(GUI.Button ( Rect(Screen.width/2.0 - 50,400,100,40), "RESET")){
 						
-						audio.PlayOneShot(ButtonSound);
+						GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 						Application.LoadLevel (5);
 				}
 		}
@@ -73,14 +73,14 @@ function OnGUI () {
 		
 				if(GUI.Button ( Rect(10,10,100,20), "Camera1")) {
 						
-						audio.PlayOneShot(ButtonSound);
+						GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 						Camera.main.GetComponent ("SmoothFollow").enabled = true;
 				
 				}
 				
 				if(GUI.Button ( Rect(120,10,100,20), "Camera2")) {
 						
-						audio.PlayOneShot(ButtonSound);
+						GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 						Camera.main.GetComponent ("SmoothFollow").enabled = false;
 						Camera.main.transform.position = POV1.position;
 						Camera.main.transform.rotation = POV1.rotation;
@@ -89,7 +89,7 @@ function OnGUI () {
 				
 				if(GUI.Button ( Rect(230,10,100,20), "Camera3")) {
 						
-						audio.PlayOneShot(ButtonSound);
+						GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 						Camera.main.GetComponent ("SmoothFollow").enabled = false;
 						Camera.main.transform.position = POV2.position;
 						Camera.main.transform.rotation = POV2.rotation;

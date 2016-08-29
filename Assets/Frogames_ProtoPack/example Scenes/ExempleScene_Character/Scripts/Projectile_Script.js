@@ -38,7 +38,7 @@ function OnCollisionEnter(collision : Collision) {
 			//Apply a force to the ragdoll
 			var Impact : Vector3 = ImpactForce * transform.forward + Vector3(0,UpForce,0);
 			var MonPointImpact : GameObject = MaRagdoll.Find("/" + MaRagdoll.name + "/biped");
-			MonPointImpact.rigidbody.AddForce(Impact);
+			MonPointImpact.GetComponent.<Rigidbody>().AddForce(Impact);
 			
 			//Projectile destruction
 			Destroy (gameObject);

@@ -50,7 +50,7 @@ function OnGUI () {
 		
 		if(GUI.Button ( Rect(Screen.width - 60,10,50,20), "Back"))  {
 		
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (0);
 		}
 		
@@ -59,31 +59,31 @@ function OnGUI () {
 
 		if(GUI.Button ( Rect(270,10,60,20), "1 Gun")) {
 		
-			audio.PlayOneShot(ButtonSound);
+			GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 			ChangeWeapon(1);
 		}
 			
 		if(GUI.Button ( Rect(340,10,60,20), "2 Guns")) {
 		
-			audio.PlayOneShot(ButtonSound);
+			GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 			ChangeWeapon(2);
 		}
 		
 		if(GUI.Button ( Rect(410,10,60,20), "Rifle")) {
 		
-			audio.PlayOneShot(ButtonSound);
+			GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 			ChangeWeapon(3);
 		}
 		
 		if(GUI.Button ( Rect(480,10,60,20), "Wand")) {
 		
-			audio.PlayOneShot(ButtonSound);
+			GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 			ChangeWeapon(5);
 		}
 		
 		if(GUI.Button ( Rect(550,10,60,20), "Sword")) {
 		
-			audio.PlayOneShot(ButtonSound);
+			GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 			ChangeWeapon(4);
 		}
 }
@@ -118,20 +118,20 @@ function Update ()
 		//Moving forward
         if(Input.GetAxis("Vertical") > .1) {
 		
-			animation.CrossFade("run",0.3);
+			GetComponent.<Animation>().CrossFade("run",0.3);
 			RunSpeed = MoveSpeed;
 		
 		//Moving backward
         } else if (Input.GetAxis("Vertical") < -.1){
 		
-			animation.CrossFade("back",0.3);
+			GetComponent.<Animation>().CrossFade("back",0.3);
 			RunSpeed = MoveSpeed/2.0;
 		
 		//Idle & Turn
 		} else {
 			
-			if(Input.GetAxis("Horizontal") && !Input.GetAxis("Vertical")) animation.CrossFade("turn",0.3);
-			else animation.CrossFade("idle", 0.1);		
+			if(Input.GetAxis("Horizontal") && !Input.GetAxis("Vertical")) GetComponent.<Animation>().CrossFade("turn",0.3);
+			else GetComponent.<Animation>().CrossFade("idle", 0.1);		
         }
 		
 		
@@ -153,8 +153,8 @@ function Update ()
 	}
 	
 	
-	if (CurrentAction == 0 ) animation.Blend(weaponAnimation);
-	else if (CurrentAction == 1 ) animation.Blend(weaponAnimation + "_action", 1.0, 0.0);
+	if (CurrentAction == 0 ) GetComponent.<Animation>().Blend(weaponAnimation);
+	else if (CurrentAction == 1 ) GetComponent.<Animation>().Blend(weaponAnimation + "_action", 1.0, 0.0);
 	
 
     ForwardDirection.y -= gravity * Time.deltaTime;
@@ -177,7 +177,7 @@ function Action(){
 	
 	CreateProjectile();
 	
-	yield WaitForSeconds (animation[weaponAnimation + "_action"].length);
+	yield WaitForSeconds (GetComponent.<Animation>()[weaponAnimation + "_action"].length);
 	CurrentAction = 0;
 
 }
@@ -189,29 +189,29 @@ function CreateProjectile(){
 				
 				case 1: // 1 Gun
 				var MonProjectile1 = GameObject.Instantiate(Object_Projectile_gun, Weapon_gun1.transform.position, transform.rotation);
-				audio.PlayOneShot(Sound_Projectile_gun);
+				GetComponent.<AudioSource>().PlayOneShot(Sound_Projectile_gun);
 				break;
 
 				case 2: // 2 Guns
 				var MonProjectile21 = GameObject.Instantiate(Object_Projectile_gun, Weapon_gun1.transform.position, transform.rotation);
-				audio.PlayOneShot(Sound_Projectile_gun);
+				GetComponent.<AudioSource>().PlayOneShot(Sound_Projectile_gun);
 				yield WaitForSeconds (0.2);
 				var MonProjectile22 = GameObject.Instantiate(Object_Projectile_gun, Weapon_gun2.transform.position, transform.rotation);
-				audio.PlayOneShot(Sound_Projectile_gun);
+				GetComponent.<AudioSource>().PlayOneShot(Sound_Projectile_gun);
 				break;
 				
 				case 3: // Rifle
 				var MonProjectile3 = GameObject.Instantiate(Object_Projectile_rifle, Weapon_rifle.transform.position, transform.rotation);
-				audio.PlayOneShot(Sound_Projectile_rifle);
+				GetComponent.<AudioSource>().PlayOneShot(Sound_Projectile_rifle);
 				break;
 				
 				case 4: // Sword
 				var MonProjectile4 = GameObject.Instantiate(Object_Projectile_sword, Weapon_sword.transform.position, transform.rotation);
-				audio.PlayOneShot(Sound_Projectile_sword);
+				GetComponent.<AudioSource>().PlayOneShot(Sound_Projectile_sword);
 				break;
 				
 				case 5: // Wand
-				audio.PlayOneShot(Sound_Projectile_magic);
+				GetComponent.<AudioSource>().PlayOneShot(Sound_Projectile_magic);
 				yield WaitForSeconds (0.3);
 				var MonProjectile5 = GameObject.Instantiate(Object_Projectile_magic, Weapon_wand.transform.position, transform.rotation);
 				break;
@@ -252,30 +252,30 @@ function MountWeapon(WeaponNum : int, Action : boolean){
 				switch(WeaponNum){
 				
 						case 1:
-						Weapon_gun1.renderer.enabled = Action;
+						Weapon_gun1.GetComponent.<Renderer>().enabled = Action;
 						if (Action) weaponAnimation = "up_1gun";
 						break;
 						
 						case 2:
-						Weapon_gun1.renderer.enabled = Action;
-						Weapon_gun2.renderer.enabled = Action;
+						Weapon_gun1.GetComponent.<Renderer>().enabled = Action;
+						Weapon_gun2.GetComponent.<Renderer>().enabled = Action;
 						if (Action) weaponAnimation = "up_2guns";
 						break;
 						
 						case 3:
-						Weapon_rifle.renderer.enabled = Action;
+						Weapon_rifle.GetComponent.<Renderer>().enabled = Action;
 						if (Action) weaponAnimation = "up_rifle";
 						break;
 						
 						case 4:
-						Weapon_sword.renderer.enabled = Action;
-						Weapon_shield.renderer.enabled = Action;
+						Weapon_sword.GetComponent.<Renderer>().enabled = Action;
+						Weapon_shield.GetComponent.<Renderer>().enabled = Action;
 						if (Action) weaponAnimation = "up_sword";
 						break;
 						
 						case 5:
-						Weapon_wand.renderer.enabled = Action;
-						Weapon_hat.renderer.enabled = Action;
+						Weapon_wand.GetComponent.<Renderer>().enabled = Action;
+						Weapon_hat.GetComponent.<Renderer>().enabled = Action;
 						if (Action) weaponAnimation = "up_wand";
 						break;
 

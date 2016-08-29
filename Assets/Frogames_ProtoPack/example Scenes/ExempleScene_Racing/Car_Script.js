@@ -75,7 +75,7 @@ function SetWheelParams(wheel : Transform, maxSteer : float, motor : boolean, ra
 	go.transform.parent = transform;					// the car, not the wheel is parent
 	go.transform.position = wheel.position; 		// match wheel pos
 	
-	var col : WheelCollider = go.AddComponent("WheelCollider");	// create the actual wheel collider in the collider game object
+	var col : WheelCollider = go.AddComponent.<WheelCollider>();	// create the actual wheel collider in the collider game object
 	col.motorTorque = 0.0;
 	
 	// store some useful references in the wheeldata object
@@ -136,7 +136,7 @@ function Start () {
 	}
 	
 	// we move the center of mass (somewhere below the center works best.)
-	rigidbody.centerOfMass += shiftCenter;		
+	GetComponent.<Rigidbody>().centerOfMass += shiftCenter;		
 }
 
 
@@ -150,7 +150,7 @@ var killEngine : float = 0.0;
 function Update() {
 	
 	//Engine sound
-	audio.pitch = motorRPM / 1000.0 + 1.0;
+	GetComponent.<AudioSource>().pitch = motorRPM / 1000.0 + 1.0;
 
 }
 
@@ -268,7 +268,7 @@ function OnGUI () {
 		//Back to the Menu
 		if(GUI.Button ( Rect(Screen.width - 60,10,50,20), "Back")){
 				
-				audio.PlayOneShot(ButtonSound);
+				GetComponent.<AudioSource>().PlayOneShot(ButtonSound);
 				Application.LoadLevel (0);
 		}
 		
